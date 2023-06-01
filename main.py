@@ -1,10 +1,9 @@
 import torch
 import torchvision
+import torchvision.models as models
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-
-
 import torch.nn as nn
 import torchvision.models as models
 
@@ -37,15 +36,23 @@ class AlexNet(nn.Module):
         return x
 
 
+option = input("사용할 모델을 선택하세요.\n 1. AlexNet\n 2. ResNet18\n 3. GoogLeNet\n 4. VGG16\n\n> ")
 
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Define transformations
-transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-])
+if (option == '1'):
+    transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.Resize((224, 224), antialias=True),
+        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+    ])
+else:
+    transform = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+    ])
 
 # Load the CIFAR-10 training dataset
 train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
@@ -55,9 +62,19 @@ train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 test_dataset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
-
 # Create an instance of the modified AlexNet model
-model = AlexNet()
+if (option == '1'):
+    print("AlexNet Model Selected:\n")
+    model = models.alexnet(weights="DEFAULT")
+if (option == '2'):
+    print("ResNet18 Model Selected:\n")
+    model = models.resnet18(weights="ResNet18_Weights.IMAGENET1K_V1")
+if (option == '3'):
+    print("GoogLeNet Model Selected:\n")
+    model = models.googlenet(weights="GoogLeNet_Weights.IMAGENET1K_V1")
+if (option == '4'):
+    print("VGG16 Model Selected:\n")
+    model = models.vgg16(weights="DEFAULT")
 model.to(device)
 
 # Define loss function
