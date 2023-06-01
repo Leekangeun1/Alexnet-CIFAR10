@@ -1,0 +1,67 @@
+C:\Users\pc03\AppData\Local\Programs\Python\Python310\python.exe C:\Users\pc03\Desktop\Alexnet-CIFAR10-main\main.py 
+사용할 모델을 선택하세요.
+ 1. AlexNet
+ 2. ResNet18
+ 3. GoogLeNet
+ 4. VGG16
+
+> 2
+Files already downloaded and verified
+Files already downloaded and verified
+ResNet18 Model Selected:
+
+100%|██████████| 1563/1563 [00:19<00:00, 80.37it/s]
+Epoch [1/10] - Train Loss: 1.1591 - Train Accuracy: 61.32%
+100%|██████████| 313/313 [00:01<00:00, 230.08it/s]
+Epoch [1/10] - Test Accuracy: 71.82%
+
+100%|██████████| 1563/1563 [00:18<00:00, 86.36it/s]
+Epoch [2/10] - Train Loss: 0.7681 - Train Accuracy: 74.13%
+100%|██████████| 313/313 [00:01<00:00, 209.94it/s]
+Epoch [2/10] - Test Accuracy: 76.37%
+
+100%|██████████| 1563/1563 [00:18<00:00, 84.65it/s]
+Epoch [3/10] - Train Loss: 0.6420 - Train Accuracy: 78.52%
+100%|██████████| 313/313 [00:01<00:00, 221.61it/s]
+Epoch [3/10] - Test Accuracy: 76.16%
+
+100%|██████████| 1563/1563 [00:17<00:00, 89.43it/s]
+Epoch [4/10] - Train Loss: 0.5902 - Train Accuracy: 80.11%
+100%|██████████| 313/313 [00:01<00:00, 231.24it/s]
+Epoch [4/10] - Test Accuracy: 77.79%
+
+100%|██████████| 1563/1563 [00:17<00:00, 88.41it/s]
+Epoch [5/10] - Train Loss: 0.4530 - Train Accuracy: 84.75%
+100%|██████████| 313/313 [00:01<00:00, 230.63it/s]
+Epoch [5/10] - Test Accuracy: 77.60%
+
+100%|██████████| 1563/1563 [00:17<00:00, 87.42it/s]
+Epoch [6/10] - Train Loss: 0.3740 - Train Accuracy: 87.23%
+100%|██████████| 313/313 [00:01<00:00, 231.14it/s]
+Epoch [6/10] - Test Accuracy: 79.14%
+
+100%|██████████| 1563/1563 [00:17<00:00, 88.84it/s]
+Epoch [7/10] - Train Loss: 0.3448 - Train Accuracy: 88.30%
+100%|██████████| 313/313 [00:01<00:00, 226.21it/s]
+Epoch [7/10] - Test Accuracy: 78.94%
+
+100%|██████████| 1563/1563 [00:17<00:00, 87.55it/s]
+Epoch [8/10] - Train Loss: 0.2588 - Train Accuracy: 91.20%
+100%|██████████| 313/313 [00:01<00:00, 215.53it/s]
+Epoch [8/10] - Test Accuracy: 79.37%
+
+100%|██████████| 1563/1563 [00:18<00:00, 85.90it/s]
+Epoch [9/10] - Train Loss: 0.1970 - Train Accuracy: 93.22%
+100%|██████████| 313/313 [00:01<00:00, 222.68it/s]
+Epoch [9/10] - Test Accuracy: 79.57%
+
+100%|██████████| 1563/1563 [00:17<00:00, 89.06it/s]
+Epoch [10/10] - Train Loss: 0.1814 - Train Accuracy: 93.95%
+100%|██████████| 313/313 [00:01<00:00, 226.84it/s]
+Epoch [10/10] - Test Accuracy: 79.54%
+
+Process finished with exit code 0
+
+> Accuracy: 79.14%
+> epoch당 평균 소요 시간: 17s
+> 7번째 epoch부터 Overfitting

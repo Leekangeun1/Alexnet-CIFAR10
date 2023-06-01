@@ -1,0 +1,67 @@
+C:\Users\pc03\AppData\Local\Programs\Python\Python310\python.exe C:\Users\pc03\Desktop\Alexnet-CIFAR10-main\main.py
+사용할 모델을 선택하세요.
+ 1. AlexNet
+ 2. ResNet18
+ 3. GoogLeNet
+ 4. VGG16
+
+> 1
+Files already downloaded and verified
+Files already downloaded and verified
+AlexNet Model Selected:
+
+100%|██████████| 1563/1563 [02:14<00:00, 11.65it/s]
+Epoch [1/10] - Train Loss: 1.8497 - Train Accuracy: 31.31%
+100%|██████████| 313/313 [00:17<00:00, 18.10it/s]
+Epoch [1/10] - Test Accuracy: 46.22%
+
+100%|██████████| 1563/1563 [02:14<00:00, 11.61it/s]
+Epoch [2/10] - Train Loss: 1.3976 - Train Accuracy: 49.62%
+100%|██████████| 313/313 [00:17<00:00, 18.12it/s]
+Epoch [2/10] - Test Accuracy: 58.08%
+
+100%|██████████| 1563/1563 [02:14<00:00, 11.64it/s]
+Epoch [3/10] - Train Loss: 1.2106 - Train Accuracy: 56.88%
+100%|██████████| 313/313 [00:17<00:00, 18.18it/s]
+Epoch [3/10] - Test Accuracy: 59.53%
+
+100%|██████████| 1563/1563 [02:13<00:00, 11.70it/s]
+Epoch [4/10] - Train Loss: 1.1040 - Train Accuracy: 61.31%
+100%|██████████| 313/313 [00:17<00:00, 18.35it/s]
+Epoch [4/10] - Test Accuracy: 64.06%
+
+100%|██████████| 1563/1563 [02:13<00:00, 11.72it/s]
+Epoch [5/10] - Train Loss: 1.0434 - Train Accuracy: 63.93%
+100%|██████████| 313/313 [00:17<00:00, 18.31it/s]
+Epoch [5/10] - Test Accuracy: 66.67%
+
+100%|██████████| 1563/1563 [02:13<00:00, 11.71it/s]
+Epoch [6/10] - Train Loss: 0.9992 - Train Accuracy: 65.44%
+100%|██████████| 313/313 [00:17<00:00, 18.00it/s]
+Epoch [6/10] - Test Accuracy: 67.11%
+
+100%|██████████| 1563/1563 [02:14<00:00, 11.66it/s]
+Epoch [7/10] - Train Loss: 0.9673 - Train Accuracy: 66.93%
+100%|██████████| 313/313 [00:18<00:00, 17.33it/s]
+Epoch [7/10] - Test Accuracy: 68.76%
+
+100%|██████████| 1563/1563 [02:17<00:00, 11.38it/s]
+Epoch [8/10] - Train Loss: 0.9472 - Train Accuracy: 67.69%
+100%|██████████| 313/313 [00:18<00:00, 16.83it/s]
+Epoch [8/10] - Test Accuracy: 70.40%
+
+100%|██████████| 1563/1563 [02:17<00:00, 11.35it/s]
+Epoch [9/10] - Train Loss: 0.9059 - Train Accuracy: 69.40%
+100%|██████████| 313/313 [00:17<00:00, 17.47it/s]
+Epoch [9/10] - Test Accuracy: 69.57%
+
+100%|██████████| 1563/1563 [02:17<00:00, 11.37it/s]
+Epoch [10/10] - Train Loss: 0.8986 - Train Accuracy: 69.73%
+100%|██████████| 313/313 [00:17<00:00, 17.48it/s]
+Epoch [10/10] - Test Accuracy: 70.50%
+
+Process finished with exit code 0
+
+> Accuracy: 70.40%
+> epoch당 평균 소요 시간: 17s
+> 9번째 epoch부터 Overfitting

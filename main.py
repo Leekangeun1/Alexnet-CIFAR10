@@ -1,40 +1,11 @@
 import torch
 import torchvision
-import torchvision.models as models
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-import torch.nn as nn
 import torchvision.models as models
-
-
-class AlexNet(nn.Module):
-    def __init__(self):
-        super(AlexNet, self).__init__()
-        self.features = nn.Sequential(
-            nn.Conv2d(3, 64, 3), nn.ReLU(),  # Conv2d(입력채널수, 출력채널수, 필터 크기)
-            nn.MaxPool2d(2, 2),
-            nn.Conv2d(64, 192, 3, padding=1), nn.ReLU(),
-            nn.MaxPool2d(2, 2),
-            nn.Conv2d(192, 384, 3, padding=1), nn.ReLU(),
-            nn.Conv2d(384, 256, 3, padding=1), nn.ReLU(),
-            nn.Conv2d(256, 256, 1), nn.ReLU(),
-            nn.MaxPool2d(2, 2))
-
-        # Dense layer 구축
-        self.classifier = nn.Sequential(
-            nn.Dropout(0.5),
-            nn.Linear(256 * 3 * 3, 1024), nn.ReLU(),
-            nn.Dropout(0.5),
-            nn.Linear(1024, 512), nn.ReLU(),
-            nn.Linear(512, 10))
-
-    def forward(self, x):
-        x = self.features(x)
-        x = x.view(-1, 256 * 3 * 3)
-        x = self.classifier(x)
-        return x
-
+from AlexNet import AlexNet
+from VGG import VGG16
 
 option = input("사용할 모델을 선택하세요.\n 1. AlexNet\n 2. ResNet18\n 3. GoogLeNet\n 4. VGG16\n\n> ")
 
@@ -42,17 +13,10 @@ option = input("사용할 모델을 선택하세요.\n 1. AlexNet\n 2. ResNet18\
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Define transformations
-if (option == '1'):
-    transform = transforms.Compose([
-        transforms.ToTensor(),
-        transforms.Resize((224, 224), antialias=True),
-        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-    ])
-else:
-    transform = transforms.Compose([
-        transforms.ToTensor(),
-        transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
-    ])
+transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+])
 
 # Load the CIFAR-10 training dataset
 train_dataset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
@@ -65,7 +29,8 @@ test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 # Create an instance of the modified AlexNet model
 if (option == '1'):
     print("AlexNet Model Selected:\n")
-    model = models.alexnet(weights="DEFAULT")
+    # model = models.alexnet(weights="DEFAULT")
+    model = AlexNet()
 if (option == '2'):
     print("ResNet18 Model Selected:\n")
     model = models.resnet18(weights="ResNet18_Weights.IMAGENET1K_V1")
@@ -74,7 +39,9 @@ if (option == '3'):
     model = models.googlenet(weights="GoogLeNet_Weights.IMAGENET1K_V1")
 if (option == '4'):
     print("VGG16 Model Selected:\n")
-    model = models.vgg16(weights="DEFAULT")
+    # model = models.vgg16(weights="DEFAULT")
+    print("HELLO")
+    model = VGG16()
 model.to(device)
 
 # Define loss function

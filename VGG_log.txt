@@ -1,0 +1,63 @@
+Files already downloaded and verified
+Files already downloaded and verified
+VGG16 Model Selected:
+
+100%|██████████| 1563/1563 [02:09<00:00, 12.06it/s]
+
+Epoch [1/10] - Train Loss: 1.9013 - Train Accuracy: 25.91%
+100%|██████████| 313/313 [00:06<00:00, 48.70it/s]
+
+Epoch [1/10] - Test Accuracy: 35.15%
+100%|██████████| 1563/1563 [02:09<00:00, 12.05it/s]
+
+Epoch [2/10] - Train Loss: 1.6262 - Train Accuracy: 33.61%
+100%|██████████| 313/313 [00:06<00:00, 49.18it/s]
+
+Epoch [2/10] - Test Accuracy: 33.63%
+100%|██████████| 1563/1563 [02:09<00:00, 12.05it/s]
+
+Epoch [3/10] - Train Loss: 1.4188 - Train Accuracy: 44.79%
+100%|██████████| 313/313 [00:05<00:00, 52.88it/s]
+
+Epoch [3/10] - Test Accuracy: 46.88%
+100%|██████████| 1563/1563 [02:09<00:00, 12.02it/s]
+
+Epoch [4/10] - Train Loss: 1.3152 - Train Accuracy: 52.51%
+100%|██████████| 313/313 [00:05<00:00, 54.06it/s]
+
+Epoch [4/10] - Test Accuracy: 58.48%
+100%|██████████| 1563/1563 [02:09<00:00, 12.04it/s]
+
+Epoch [5/10] - Train Loss: 1.1245 - Train Accuracy: 61.04%
+100%|██████████| 313/313 [00:05<00:00, 53.38it/s]
+
+Epoch [5/10] - Test Accuracy: 61.61%
+100%|██████████| 1563/1563 [02:10<00:00, 12.01it/s]
+
+Epoch [6/10] - Train Loss: 1.0636 - Train Accuracy: 63.64%
+100%|██████████| 313/313 [00:05<00:00, 52.66it/s]
+
+Epoch [6/10] - Test Accuracy: 63.49%
+100%|██████████| 1563/1563 [02:09<00:00, 12.05it/s]
+
+Epoch [7/10] - Train Loss: 1.0061 - Train Accuracy: 66.23%
+100%|██████████| 313/313 [00:06<00:00, 50.12it/s]
+
+Epoch [7/10] - Test Accuracy: 58.32%
+100%|██████████| 1563/1563 [02:08<00:00, 12.16it/s]
+
+Epoch [8/10] - Train Loss: 0.9475 - Train Accuracy: 68.53%
+100%|██████████| 313/313 [00:05<00:00, 54.58it/s]
+
+Epoch [8/10] - Test Accuracy: 69.69%
+100%|██████████| 1563/1563 [02:09<00:00, 12.09it/s]
+
+Epoch [9/10] - Train Loss: 0.9083 - Train Accuracy: 70.42%
+100%|██████████| 313/313 [00:05<00:00, 52.30it/s]
+
+Epoch [9/10] - Test Accuracy: 67.19%
+100%|██████████| 1563/1563 [02:09<00:00, 12.02it/s]
+
+Epoch [10/10] - Train Loss: 0.9351 - Train Accuracy: 69.54%
+100%|██████████| 313/313 [00:06<00:00, 49.85it/s]
+Epoch [10/10] - Test Accuracy: 70.66%
